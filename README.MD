@@ -8,3 +8,5 @@
     - How NodeJS works?
     - Bulding Http server in NodeJS
     - Handling URL's
+    - Http methods(GET, POST, PUT, PATCH ,DELETE)
+    - Getting started with express js
