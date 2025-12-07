@@ -10,3 +10,6 @@
     - Handling URL's
     - Http methods(GET, POST, PUT, PATCH ,DELETE)
     - Getting started with express js
+    - How versioning works in NodeJS
+    - REST API
+    - Building RESTful API's using Node & Express
