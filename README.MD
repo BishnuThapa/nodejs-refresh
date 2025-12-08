@@ -15,3 +15,5 @@
     - Building RESTful API's using Node & Express
     - Postman for REST API's
     - Express Middleware 
+    - HTTP headers in API
+    - HTTP status codes

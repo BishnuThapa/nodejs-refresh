@@ -29,6 +29,7 @@ app.use((req, res, next) => {
 
 
 app.get('/api/users', (req, res) => {
+    res.setHeader('X-myName', 'Bishnu Thapa'); // custom header with X prefix
     res.json(users);
 });
 
