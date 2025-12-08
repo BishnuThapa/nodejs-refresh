@@ -30,7 +30,7 @@ app.use((req, res, next) => {
 
 app.get('/api/users', (req, res) => {
     res.setHeader('X-myName', 'Bishnu Thapa'); // custom header with X prefix
-    res.json(users);
+    return res.status(200).json(users);
 });
 
 // Route Grouping for /api/users/:id
@@ -53,7 +53,7 @@ app.post('/api/users', (req, res) => {
     // save to mock_data.json
     users.push({ ...body, id: users.length + 1 });
     fs.writeFile('MOCK_DATA.json', JSON.stringify(users), (err, data) => { 
-        return res.json({status:"success",id:users.length});
+        return res.status(201).json({status:"success",id:users.length});
     })
 })
 
