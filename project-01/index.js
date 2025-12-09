@@ -1,8 +1,41 @@
 const express = require('express');
 const fs=require('fs');
 const app=express();
+const mongoose=require('mongoose');
 const PORT = 8000
-const users=require('./MOCK_DATA.json')
+const users=require('./MOCK_DATA.json');
+const { type } = require('os');
+
+// Connect to MongoDB
+mongoose.connect(
+  "mongodb+srv://thapabishnu20_db_user:z3nDomdKAGyGLD4S@nodejs-youtube.svhk0ke.mongodb.net/Youtube-App-Piyush"
+);
+
+// User Schema using mongoose
+const userSchema = new mongoose.Schema({
+  firstName: {
+    type: String,
+    required: true
+  },
+  lastName: {
+    type: String,
+    required: true
+  },
+  email: {
+    type: String,
+    required: true,
+    unique: true  
+  },
+  gender: {
+    type: String,
+    enum: ['Male', 'Female', 'Other']
+  },
+  jobTitle: {
+    type: String,
+  }
+})
+ const User = mongoose.model("user", userSchema);
+
 
 app.use(express.json()); // middleware for post req body parsing
 // Express Middleware
