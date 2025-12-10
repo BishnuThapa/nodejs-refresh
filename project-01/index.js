@@ -4,12 +4,14 @@ const app=express();
 const mongoose=require('mongoose');
 const PORT = 8000
 const users=require('./MOCK_DATA.json');
-const { type } = require('os');
 
 // Connect to MongoDB
-mongoose.connect(
-  "mongodb+srv://thapabishnu20_db_user:z3nDomdKAGyGLD4S@nodejs-youtube.svhk0ke.mongodb.net/Youtube-App-Piyush"
-);
+mongoose
+  .connect(
+    "mongodb+srv://thapabishnu20_db_user:SUXj5pgOSvbnPf8u@cluster0.4oiilka.mongodb.net/myDatabase?appName=Cluster0")
+  .then(() => console.log("Connected to MongoDB"))
+  .catch((err) => console.log("MongoDB Error:", err));
+
 
 // User Schema using mongoose
 const userSchema = new mongoose.Schema({
