@@ -1,5 +1,8 @@
 ## NODE JS Refreshing 
 
+## if there is not autocomplete in modules (like fs.)
+    - npm install @types/node 
+
     - What is NodeJS?
     - NodeJS Installation
     - Hello World in NodeJS

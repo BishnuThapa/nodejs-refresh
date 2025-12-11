@@ -7,8 +7,7 @@ const users=require('./MOCK_DATA.json');
 
 // Connect to MongoDB
 mongoose
-  .connect(
-    "mongodb+srv://thapabishnu20_db_user:SUXj5pgOSvbnPf8u@cluster0.4oiilka.mongodb.net/myDatabase?appName=Cluster0")
+  .connect(`${process.env.MONGODB_URL}`)
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.log("MongoDB Error:", err));
 
